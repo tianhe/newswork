@@ -23,7 +23,7 @@ end
 
 gem 'jquery-rails'
 #gem 'bitly-oauth', path: '/Users/tianhe1/Documents/work/bitly-oauth'
-gem 'bitly-oauth', git: 'git@github.com:/tianhe/bitly-oauth.git'
+gem 'bitly-oauth', git: 'git://github.com:/tianhe/bitly-oauth.git'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
