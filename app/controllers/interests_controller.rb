@@ -1,4 +1,4 @@
-class InterestsController < ActionController::Base
+class InterestsController < ApplicationController
   def index
     @interests = Interest.all
   end
