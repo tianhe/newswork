@@ -1,5 +1,6 @@
-PATH
-  remote: /Users/tianhe1/Documents/work/bitly-oauth
+GIT
+  remote: git@github.com:/tianhe/bitly-oauth.git
+  revision: 4ea76e0fa32fd06c879a4486ab8bcd11a90cedb8
   specs:
     bitly-oauth (0.2.3)
       httparty
