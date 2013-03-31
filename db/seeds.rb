@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Interest.create(name: 'fracking')
+Interest.create(name: 'inspirational quotes')
+Interest.create(name: 'urban compass')
+Interest.create(name: 'cheryl sandberg')
