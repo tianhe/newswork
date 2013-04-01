@@ -1,5 +1,5 @@
 class InterestsController < ApplicationController
   def index
-    @interests = Interest.all
+    @interests = current_user.interests
   end
 end

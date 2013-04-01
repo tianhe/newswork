@@ -4,4 +4,6 @@
   .description
     = link.description
   .url
-    = link_to "Full Article", link.url, target: '_blank'
+    = link_to 'Full Article', link.url, target: '_blank'
+  .share
+    = link_to 'Share', "/share?link=#{link.id}", target: '_blank'
