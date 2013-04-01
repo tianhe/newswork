@@ -7,3 +7,5 @@
     = link_to "Full Article @ #{URI.parse(link.url).host.downcase}", link.url, target: '_blank'
   .share
     = link_to 'Share', "/share?link=#{link.id}", target: '_blank'
+  .dislike
+  	= link_to 'Spam', '#'
