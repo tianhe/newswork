@@ -13,7 +13,9 @@ class NewsSourceManager
 
   def create_links interest
     pull_news(interest.name).each do |result|
-      interest.links.create(prepare_for_create(result))
+      if attributes = prepare_for_create(result)
+        interest.links.create(attributes)
+      end
     end
   end
 
@@ -28,7 +30,12 @@ private
   end
 
   def prepare_for_create result
-    result.keep_if { |k, v| Link.accessible_attributes.to_a.include? k }
+    begin
+      uri = URI.parse(result['url'])
+      result.keep_if { |k, v| Link.accessible_attributes.to_a.include? k }
+    rescue URI::InvalidURIError
+      false
+    end
   end
 
 end

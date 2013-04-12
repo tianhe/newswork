@@ -1,0 +1,8 @@
+.refresh-feed
+  = link_to 'Refresh', '/feed/reload'
+.new-user-interest
+  = form_tag user_interests_path, method: :post do
+    = text_field_tag 'name'
+    = submit_tag
+.news
+  = render @user_interests
