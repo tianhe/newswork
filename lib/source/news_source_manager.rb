@@ -32,6 +32,7 @@ private
   def prepare_for_create result
     begin
       uri = URI.parse(result['url'])
+      result['title'] = result['title'][0, 255]
       result.keep_if { |k, v| Link.accessible_attributes.to_a.include? k }
     rescue URI::InvalidURIError
       false
